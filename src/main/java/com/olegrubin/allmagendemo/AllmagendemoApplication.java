@@ -1,0 +1,12 @@
+package com.olegrubin.allmagendemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AllmagendemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(AllmagendemoApplication.class, args);
+    }
+}
