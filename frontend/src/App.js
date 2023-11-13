@@ -140,7 +140,7 @@ const Table = ({
 };
 
 const App = () => {
-  const [period, setPeriod] = useState('Hours');
+  const [period, setPeriod] = useState('Days');
   const [eventKey, setEventKey] = useState('*');
   const [statisticsData, setStatisticsData] = useState([]);
   const [selectOptions, setSelectOptions] = useState({});
