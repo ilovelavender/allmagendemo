@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 public class StatisticsServiceImpl implements StatisticsService {
 
     private static final int IMPRESSIONS_THRESHOLD = 50;
-    private static final int TYPEAHEAD_LIMIT = 5;
 
     private static final Map<String, List<String>> SELECT_OPTIONS = Map.of(
         AggregationField.class.getSimpleName(),
@@ -87,12 +86,6 @@ public class StatisticsServiceImpl implements StatisticsService {
                     MAKE_ADR_ZERO.accept(d);
                 }
             }).collect(Collectors.toList());
-    }
-
-    @Override
-    public List<String> getTypeaheadHint(AggregationField aggregationField, String prefix) {
-        return statisticsReadDao.selectValuesForTypeahead(
-            aggregationField, prefix, TYPEAHEAD_LIMIT);
     }
 
     private List<TimeDataRecord> fixMissingIntervalsAndBrokenRecords(

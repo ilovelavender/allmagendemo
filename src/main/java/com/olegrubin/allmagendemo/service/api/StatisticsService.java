@@ -17,7 +17,4 @@ public interface StatisticsService {
 
     List<AggregatedTableRecord> getAggregatedData(
         AggregationField aggregationField, String eventKey);
-
-    List<String> getTypeaheadHint(
-        AggregationField aggregationField, String prefix);
 }

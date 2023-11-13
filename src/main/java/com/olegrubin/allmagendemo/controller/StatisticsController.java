@@ -50,13 +50,4 @@ public class StatisticsController {
     public SuccessResponse<Map<String, List<String>>> getSelectOptions() {
         return new SuccessResponse<>(statisticsService.getSelectOptions());
     }
-
-    @GetMapping("/select-typeahead")
-    public SuccessResponse<List<String>> getTypeaheadHint(
-        @RequestParam AggregationField field,
-        @RequestParam(required = false) String prefix
-    ) {
-        List<String> hints = statisticsService.getTypeaheadHint(field, prefix);
-        return new SuccessResponse<>(hints);
-    }
 }

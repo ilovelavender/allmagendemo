@@ -17,7 +17,5 @@ public interface StatisticsReadDao {
 
     List<AggregatedTableRecord> getAggregatedStatistics(AggregationField field, String eventKey);
 
-    List<String> selectValuesForTypeahead(AggregationField field, String prefix, int limit);
-
     List<String> selectEventsTags();
 }
